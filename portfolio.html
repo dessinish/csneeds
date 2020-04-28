@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>;) The Portfolio </title>
+<link rel="stylesheet" type="text/css" href="/CSNeeds/Articlestyle.css">
+<style type="text/css">
+*{margin:0px;
+      }
+#art_img{height:350px;
+width:100%;
+}
+#art_h1{font-size:70px; font-family: agency FB;}
+
+</style>
+</head>
+<body>
+	<header class="mainhdr">
+<div>
+ <a href="main.html"><img src="/CSNeeds/cs10.png" id="logo"></a>
+<span id="register" style="margin-left:205px;">Join Us</span>
+<span id="register" style="margin-left:275px;">Sign In</span>  
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" style="margin-top:120px;">About Us</a>
+  <a href="#">Services</a>
+  <a href="#">Career</a>
+  <a href="#">Articles</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main" class="topnav" >
+   <forescseq style="font-size:30px; margin-left:20px; cursor:pointer" onclick="openNav()">&#9776;</forescseq>
+  
+  <a href="/CSNeeds/main.html" style="margin-left:200px; position:absolute;" ><b>Around Home</b></a>
+  <a href="#Explore" style="margin-left:360px; position:absolute;"><b>Explore</b></a>
+  <a href="#College Manual" style="margin-left:465px; position:absolute;"><b>College Manual</b></a>
+  <a href="#support" style="margin-left:655px; position:absolute;"><b>Support</b></a>
+</div>
+<!--The below scripting snippet is for SideNavigation Bar -->
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+<!-- First Article div starts here-->
+<div class="art1">
+
+<h1 id="art_h1">THE DIGITAL PORTFOLIO.</h1><p style="color:navy;text-align: center; font-size:50px;font-family:agency FB;">How to build your list?</p> 
+<img src="/CSNeeds/portfoliopic.jpg" id="art_img">
+<p id="art_p1">
+
+  <i>Why not figure it out yourself?</i>
+</p>
+</body>
+</html>

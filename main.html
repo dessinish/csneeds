@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<title>:) Catering CSNeeds</title>
+
+<style>
+
+*{
+  margin:0px;
+  }
+body{
+  background-color:white;
+	zoom:90%;
+}
+.mainhdr{
+  background-color:black;
+  height:140px; 
+  width:100%; 
+  z-index: 1px;
+}
+#logo{ 
+  height:140px; 
+  width:300px; 
+  left: 40%;
+  position: absolute;
+}
+.register{ 
+ border-radius: 4px;
+ padding:5px; 
+ font-size: 16px;
+ font-family: 'Poppins', sans-serif;
+ color:white;
+}
+.register:hover{
+  color:yellow;
+}
+
+.slideshow-container {
+  z-index:100;
+  width: 100%;
+  position: relative;
+  height:auto;  
+}
+.mySlides {display: none;}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text1 {
+  color: white;
+  font-size: 48px;
+  font-family: Garamond;
+  position:absolute;
+  bottom: 335px;
+  text-align: center;
+  width: 100%;
+}
+.text2 {
+  color: white;
+  font-size: 48px;
+  font-family: Garamond;
+  margin-left: 130px;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  text-align: center;
+}
+.text3 {
+  color: black;
+  margin-left:40px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family:Garamond;
+  position:absolute;
+  bottom: 350px;
+  width: 100%;
+
+}
+.text4 {
+  color: black;
+  text-align:center;
+  margin-left:10px;
+  font-size: 40px;
+  font-family:Garamond;
+  position:absolute;    
+  top: 40px;
+  width: 100%;
+
+}
+.text5 {
+  color: white;
+  text-align:center;
+  margin-left:10px;
+  font-size: 40px;
+  font-family:Garamond;
+  position:absolute;
+  top: 180px;
+  width: 100%;
+
+}
+
+/* Number text (1/3 etc) */
+/*.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}*/
+
+ /*The dots/bullets/indicators*/ 
+.dot {
+
+  cursor: pointer;
+  height: 8px;
+  width: 7px;
+  display: inline-block;
+  margin: 0px 5px;
+  border-radius: 50px;
+  border: 1px solid black;
+  transition: background-color 2.9s ease;
+}
+
+.active, .dot:hover {
+  background-color: #232F3E;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.8s;
+  animation-name: fade;
+  animation-duration: 1.8s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#linking_button1{
+  height: 43px;
+  width: 145px;
+  top: 100px;
+  text-align: center;
+  left: 46%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+#linking_button2{
+  height: 43px;
+  width: 145px;
+  top: 100px;
+  text-align: center;
+  left: 46%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+#linking_button3{
+  height: 43px;
+  width: 145px;
+  top: 100px;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+}
+#linking_button4{
+  height: 43px;
+  width: 145px;
+  top: 100px;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+}
+#linking_button5{
+  height: 43px;
+  width: 145px;
+  top: 130px;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.size{
+  height:620px;
+  width: 100%;
+  text-align: center;
+  }   /*Slideshow code end*/
+
+ /*Testimonials code start*/
+
+.column {
+
+  float: left;
+  width:300px;
+  height:400px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.column > img{height:260px;
+width:270px;
+border:1px solid gray;
+border-radius:6px;}
+
+.container {
+  padding: 0 16px;
+}
+
+.title {
+  color: grey;
+}
+#feedback{font-size:13px;
+  font-weight:700;
+font-family:'Poppins' , sans-serif;}
+.overlay {
+  position: absolute;
+	  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:gray;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+/*Flip Boxes animation style snippet below*/
+.mainflip1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  text-align: center;
+  font-family: Helvetica, Arial;
+  font-weight: 200;
+  color:white;
+}
+
+#fliptxt1 {font-weight: 200;
+  font-size:35px; margin-top: 70px;}
+#fliptxt2 {margin-top: 80px;
+font-size:30px; font-weight: 700;}
+#fliptxt3 {font-weight: 200;
+font-size:35px; margin-top: 20px;}
+#fliptxt4 {margin-top: 90px; color:black;
+font-size:35px; font-weight: 700;}
+#fliptxt5 {font-weight: 200;
+font-size:32px; margin-top: 20px;}
+#fliptxt6 {margin-top: 70px; color:white;
+font-size:33px; font-weight: 700;}
+#fliptxt7 {color:white; margin-top:30px;
+font-size:33px; font-weight: 500;}
+#fliptxt8 { margin-top: 40px;color:black;
+font-size:33px; font-weight: 700;}
+#fliptxt9 {color:white; margin-top:30px;
+font-size:35px; font-weight: 500;}
+#fliptxt10 {margin-top: 45px;color:black;
+font-size:33px; font-weight: 700;}
+#fliptxt11 {color:white;margin-top:30px;
+font-size:33px; font-weight: 500;}
+#fliptxt12 {margin-top: 125px; color:white;
+font-size:33px; font-weight: 700;}
+
+.flipbutton  {margin-top:255px;
+height:50px;
+width:120px;
+cursor: pointer;
+font-size: 20px;
+font-weight:bold;
+font-family:'Poppins' , sans-serif;
+color:white;
+border:2px solid white;
+border-radius: 5px;
+background-color:transparent;}
+
+  .flip3D {
+  display: flex;
+  align-items: flex-end;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  float: left;
+}
+
+.flip3D > .flipfront {
+  position: absolute;
+  transform: perspective(1000px) rotateY(0deg);
+  background: #3B403E;
+  width: 300px;
+  height: 400px;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.flip3D > .flipback {
+  position: absolute;
+  transform: perspective(1000px) rotateY(180deg);
+  background: #0E3140;
+  width: 300px;
+  height: 400px;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.flip3D:hover > .flipfront {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+.flip3D:hover > .flipback {
+  transform: perspective(1000px) rotateY(0deg);
+}
+.mainflip2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Helvetica, Arial;
+  margin: 30px auto;
+  font-weight: 200;
+  color: white;
+}
+
+.footr{width:100%;
+height:230px;
+background-color:black;
+color:white;
+font-size:25px;}
+
+.connecting{
+  width:40px;
+  height:40px;
+  margin-left:5px;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color:white;
+  color:black;
+  margin-left:13px;
+  font-size:16px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.connecting:hover .tooltiptext {
+    visibility: visible;
+}
+.footr_navi{ position:absolute;
+margin-left:100px;
+text-decoration:none;
+color:beige;
+font-size:22px; }
+.footr_navi:hover{color:yellow;}
+
+#footr_email{ 
+  width: 13%;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+  font-family:Poppins;
+  font-size: 14px;
+  padding: 6px;
+}
+ 
+     /*Sign Me button for people's Email >code*/
+                             
+#signme{ 
+width: 6%;
+font-weight: 100;
+font-family: poppins;
+font-size: 15px;
+border: 1px solid white;
+border-radius: 4px;
+background-color: white;
+padding: 6px;
+ }
+
+#Terms_CondiBAR { text-decoration:none; color:beige; text-align:right; font-size:20px;  }
+#Terms_CondiBAR a{text-decoration:none; color:beige; 
+  font-size:20px; }
+#Terms_CondiBAR a:hover {text-decoration:none; color:yellow; 
+  font-size:20px; }
+
+.hdr_logo{
+  float: left;
+  width: auto;
+  height: auto;
+}
+.hdr_btns{
+  float: right;
+  margin-right: 90px;
+  margin-top: 90px;
+  width: auto;
+  height: auto;
+}
+.hdr_btns a{
+  text-decoration: none;
+}
+.register.joinus{
+  margin-right: 20px;
+}
+.slide_sec_container{
+  height: 630px;
+  width: 80%;
+  margin: 0 auto;
+}
+.btn_to_top img{
+  margin-right: 15px;
+  margin-top: 15px;
+  float: right;
+  width: 46px;
+  height:40px;
+  border-radius: 5px;
+}
+.side_menu{
+  display: block;
+  padding-left:10px;
+}
+.dot_slide_count{
+  text-align: center;
+}
+.nl_fields{
+  text-align: center;
+}
+.open_nav{
+  display:none;
+  padding: 30px 21px;
+}
+.open_nav span{
+  margin-bottom: 30px;
+}
+.open_nav span a{
+  text-decoration: none;
+  color: white;
+}
+
+forescseq.toggle_btn {
+  color: white;
+  position: absolute;
+  left: 32px;
+  top: 90px;
+}
+.hdn_nav_bar {
+  background-color: black;
+  color: white;
+  box-shadow: 1px 3px 2px 1px #bdbcbc;
+  height: auto;
+  top: 140px;
+  width: auto;
+  position: absolute;
+  z-index: 999;
+}
+.below_hdr_menu{
+  margin: 30px auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+.below_hdr_menu a{
+  text-decoration: none;
+  color: black;
+  margin: 0px 24px;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.below_hdr_menu a{
+    border-bottom: 1px solid transparent;    
+    transition: all .5s ease-in;
+}
+.below_hdr_menu a:hover{
+    border-bottom: 1px solid black;    
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="mainhdr">
+  <forescseq class="toggle_btn">&#9776;</forescseq>
+  <div class="hdn_nav_bar" >
+    <div class="open_nav">
+      <span class="side_menu"><a href="/CSNeeds/main.html" ><b>Around Home</b></a></span>
+      <span class="side_menu"><a href="#Explore"><b>Explore</b></a></span>
+      <span class="side_menu"><a href="#College Manual"><b>College Manual</b></a></span>
+      <span class="side_menu"><a href="#support"><b>Support</b></a></span>
+    </div>
+  </div>
+<div class="hdr_logo">
+ <a href="main.html"><img id="logo" src="img/cs10.png"></a>
+</div>
+<div class="hdr_btns">
+  <a href="/CSNeeds/login and signup.html"><span class="register joinus">Join Us</span></a>
+  <a href="/CSNeeds/login and signup.html"><span class="register signin">Sign In</span></a>  
+</div>
+</header>
+ 
+<div class="below_hdr_menu">
+  <!-- <a class="closebtn">&times;</a> -->
+  <a href="#">About Us</a>
+  <a href="#">Services</a>
+  <a href="#">Career</a>
+  <a href="#">Articles</a>
+  <a href="#">Contact</a>
+</div>
+
+<!--The below scripting snippet is for SideNavigation Bar -->
+
+<script>
+
+jQuery (document).ready(function(){
+  jQuery(".toggle_btn").click(function(){
+   jQuery(".open_nav").slideToggle();
+  });
+});
+
+</script>
+<!--The below code snippet is for Slideshow -->
+<div class="slide_sec_container">
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+    <!--  <div class="numbertext">1 / 5</div>-->
+      <img class ="size" src="img/thedesk_compr.jpg">
+      <p class="text1">Introspecting Career: The Metaphorical Reality.<br><a href="/CSNeeds/slide1_link.html" style= "cursor: "><input type="button" id="linking_button1" name="Get to know " value="Get to Know" height="60px" weight="80px"></a></p>
+    </div>
+
+    <div class="mySlides fade">
+      <!--<div class="numbertext">2 / 5</div>-->
+      <img class ="size" src="img/bri_compr.jpg">
+      <p class="text2">The Programming Trend.<br><a href="/CSNeeds/slide2_link.html"><input type="button" id="linking_button2" name="Learn Here" value="Learn Here" height="60px" weight="80px"></a></p>
+    </div>
+
+    <div class="mySlides fade"  >
+      <!--<div class="numbertext">3 / 5</div>-->
+      <img class ="size" src="img/books_compr.jpg">
+      <p class="text3"><span>Read Right:</span><br>Books Popular in the Coding World.<br><a href="#"><input type="button" name="Shelf It" value="Shelf It" id="linking_button3" href="#" height="60px" weight="80px"></a></p>
+    </div>
+
+  <div class="mySlides fade"  >
+      <!--<div class="numbertext">4 / 5</div>-->
+      <img class ="size" src="img/thelimit_compr.jpg">
+      <p class="text4"><span style="font-family:Garamond; ">Look Upon:</span><br>There are million answers to every problem in the world.<br><a href="#"><input type="button" name="Know It" value="Know It" id="linking_button4" href="#" height="60px" weight="80px"></a></p>
+    </div>
+
+    <div class="mySlides fade"  >
+      <!--<div class="numbertext">5 / 5</div>-->
+      <img class ="size" src="img/intern_compr.jpg">
+      <p class="text5"><span style="font-family:Garamond; ">Being Intern:</span><br>Getting yourself choosen for the right Internship with the desired company.<br><a href="#"><input type="button" name="Find Here" value="Find Here" id="linking_button5" href="#" height="60px" weight="80px"></a></p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <div class="dot_slide_count">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span> 
+  </div>
+  </div>
+                    <!--The Scripting for the Slideshow-->
+</div>
+<script>
+ var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 6000); // Change image every 2 seconds
+}
+</script>        
+
+<div class="mainflip1">
+    <div class="flip3D">
+      <div class="flipback">
+        <p id="fliptxt1"><br>Let us show you the right way to shape your career. </p>
+<a href="/CSNeeds/passionarticle.html"><input type="button" name="Find Here"value="Find Here" height="60px" weight="80px" class="flipbutton" style="margin-top:70px;"></a> 
+  </div>
+  <div class="flipfront" style="background-image:url(img/coffee.jpg);background-repeat:repeat; ">
+        <p id="fliptxt2" ><br>Do you have Pure Passion?</p><br><p style="font-weight: 500; font-size: 28px;">
+       Hitting the right chord.</p>
+      </div>
+    </div>
+
+    <div class="flip3D">
+      <div class="flipback" >
+        <p id="fliptxt3"><br>Articles that motivates you at every step of your career. CSNeeds cares for you.</p>
+        <a href="/CSNeeds/Inner_Voice.html"><input type="button" name="Find Here"value="Find Here" href="#" height="60px" weight="80px" class="flipbutton" style=" margin-top: 45px"> </a>
+
+      </div>
+      <div class="flipfront" style="background-image:url(img/writearticle.jpg);background-repeat:repeat; ">
+        <p id="fliptxt4" style="margin-right:50px;"><br>Inner Voice.</p><br><p style="font-weight: 500; color:black;font-size:28px; margin-right:43px;">
+        Articles worth reading.</p>
+      </div>
+    </div>
+
+    <div class="flip3D">
+      <div class="flipback">
+        <p id="fliptxt5"><br>Know the right way to showcase your skills. CSNeeds helps you being creative in every way possible. </p>
+        <a href="/CSNeeds/portfolio.html"><input type="button" name="Find Here"value="Find Here" href="#" height="60px" weight="80px" class="flipbutton" style=" margin-top: 45px"> </a>
+
+      </div>
+      <div class="flipfront" style="background-image:url(img/handphone.jpg);background-repeat:repeat; ">
+        <p id="fliptxt6"><br>The Digital Portfolio.</p><br><p style="font-weight: 500;font-size:28px; margin-right:43px;">
+        How to build your list?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mainflip2">
+    <div class="flip3D">
+      <div class="flipback">
+        <p id="fliptxt7"><br>Stay Updated: <br><br>Train your mind practically.</p>
+        <input type="button" name="Find Here"value="Find Here" href="#" height="60px" weight="80px" class="flipbutton" style="margin-top: 80px"> 
+      </div>
+      <div class="flipfront"  style="background-image:url(img/graduated.jpg);background-repeat:repeat; ">
+        <p id="fliptxt8"><br>Graduating is not enough.<br><p style="font-weight: 500; color:black;font-size:28px;  text-align: center;"> <br>Skills matter more than your Degree. </p>
+      </div>
+    </div>
+
+    <div class="flip3D">
+      <div class="flipback">
+        <p id="fliptxt9" ><br>Trending: <br><br>Books-Softs-Sites of 2018.</p>
+         <input type="button" name="Find Here"value="Find Here" href="#" height="60px" weight="80px" class="flipbutton" style="margin-top: 70px">
+      </div>
+      <div class="flipfront" style="background-image:url(img/bookss.jpg);background-repeat:repeat; ">
+        <p id="fliptxt10"><br>The Right Resources!<p style="font-weight: 500; color:white;font-size:28px; margin-top:120px; text-align: center;"><br>Helpful Books, Softwares & Websites. </p>
+      </div>
+    </div>
+
+    <div class="flip3D">
+      <div class="flipback">
+        <p id="fliptxt11"><br><br>Life Tales <br>of <br>Great Minds.</p>
+         <input type="button" name="Find Here"value="Find Here" href="#" height="60px" weight="80px" class="flipbutton" style=" margin-top:90px;">
+      </div>
+<div class="flipfront" style="background-image:url(img/girl.jpg);background-repeat:repeat; ">
+        <p id="fliptxt12"><br>College Diaries!<p style="font-weight: 500; color:white;font-size:28px;  text-align: center;"><br>Stories of the people like you.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="btn_to_top">
+  <a href="#logo"><img src="img/backtotop.png"></a>
+</div>
+               <!-- Footer Starts here -->
+
+  <div class="footr"><br><span style="color:beige; display:inline-block;margin-left:50px;">CONNECT WITH US</span>
+
+<a style="position:absolute; margin-left:100px;
+text-decoration:none; color:beige; font-size:22px;"><b>LEARN MORE</b></a>
+<a style="position:absolute;margin-left:100px;
+text-decoration:none; color:beige; font-size:22px;
+margin-left:340px; text-align: center;">Get the best of everything Computer Science right in your inbox.</a>
+
+    <br>
+                      <!-- Social Icons -->
+
+  <br><a href="#facebook" class="connecting"><img src="img/facebook.png" class="connecting" style="margin-left:35px;">
+   <span class="tooltiptext">Facebook</span></a>
+      <a href="#instagram" class="connecting"><img src="img/instagram.png" class="connecting" style="margin-left:35px;"><span class="tooltiptext">Instagram</span></a>
+      <a href="#twitter" class="connecting"><img src="img/twitter.png" class="connecting" style="margin-left:30px;"><span class="tooltiptext">Twitter</span></a>
+      <a href="#pinterest" class="connecting"><img src="img/pinterest.png"class="connecting" style="margin-left:28px;"><span class="tooltiptext">Pinterest</span></a>
+      <a href="#youtube" class="connecting"><img src="img/youtube.png" class="connecting" style="margin-left:24px;"><span class="tooltiptext">Youtube</span></a>
+
+
+<a href="" class="footr_navi"style=" margin-left:132px;">Support</a>
+<a href="" class="footr_navi" style="margin-top:25px; margin-left:132px;">Developers</a>
+<a href="" class="footr_navi" style="margin-top:50px; margin-left:132px;">News</a>
+<a href="" class="footr_navi"style="margin-top:75px; margin-left:132px;">Donate</a>
+<a href="" class="footr_navi" style="margin-top:100px;margin-left:132px;">Contact Us</a>
+     
+                <!-- Newsletter Email BAR -->
+<form class="nl_fields">
+  <input type="text" id="footr_email" placeholder="Enter your email address...">
+  <input id="signme" onclick="notyet()" type="submit" value="SIGN ME">
+</form>
+
+<script type="text/javascript">
+  function notyet() {alert("We are working on the best stuff. Enjoy the site and come back in a week for your 'EVERYTHING COMPUTER SCENCE DAILY'. ");}
+</script>                    
+                  <!-- Footer Base for T&C -->
+
+           <p id="Terms_CondiBAR" style="margin-top:30px;"><a href="#Privacy policy">Privacy Policy<span style="margin-left:10px;"></a>&copy;Copyright 2018<a href="/CSNeeds/main.html"><span style="margin-left:10px; margin-right:30px;">CSNeeds.in</a></span>
+     </div> 
+</body>
+</html>
