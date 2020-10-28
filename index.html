@@ -440,6 +440,7 @@ border: 1px solid white;
 border-radius: 4px;
 background-color: white;
 padding: 6px;
+cursor: pointer;
  }
 
 #Terms_CondiBAR { text-decoration:none; color:beige; text-align:right; font-size:20px;  }
@@ -500,12 +501,15 @@ padding: 6px;
   text-decoration: none;
   color: white;
 }
-
+.open_nav span a:hover{
+  color: yellow;
+}
 forescseq.toggle_btn {
   color: white;
   position: absolute;
   left: 32px;
   top: 90px;
+  cursor: pointer;
 }
 .hdn_nav_bar {
   background-color: black;
@@ -772,13 +776,29 @@ margin-left:340px; text-align: center;">Get the best of everything Computer Scie
 <a href="" class="footr_navi" style="margin-top:100px;margin-left:132px;">Contact Us</a>
      
                 <!-- Newsletter Email BAR -->
-<form class="nl_fields">
-  <input type="text" id="footr_email" placeholder="Enter your email address...">
-  <input id="signme" onclick="notyet()" type="submit" value="SIGN ME">
+<form name="NLform" action="#" class="nl_fields">
+  <input type="text" id="footr_email" name="NLemail" placeholder="Enter your email address...">
+  <input id="signme" onclick="newsletter_signup(document.NLform.NLemail);" type="submit" value="SIGN ME">
 </form>
 
 <script type="text/javascript">
-  function notyet() {alert("We are working on the best stuff. Enjoy the site and come back in a week for your 'EVERYTHING COMPUTER SCENCE DAILY'. ");}
+  
+  function newsletter_signup(inputText){
+      var mailformat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if(inputText.value.match(mailformat))
+        {
+        alert("Thanks for subscribing!");//The pop up alert for a valid email address
+        document.NLform.NLemail.focus();
+        return true;
+        }
+        else
+        {
+        alert("You have entered an invalid email address!");
+        //The pop up alert for an invalid email address
+        document.NLform.NLemail.focus();
+        return false;
+        }
+    }
 </script>                    
                   <!-- Footer Base for T&C -->
 
